@@ -1,0 +1,95 @@
+<!doctype html>
+<html ng-app="maribethApp">
+<head>
+	<title>Manager's Hub - Add Crew</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+
+	<script src="/static/js/angular/angular.js"></script>
+	<script src="/static/js/angular/angular-resource.js"></script>
+	<script src="/static/js/angular/angular-route.js"></script>
+</head>
+<body>
+	<div ng-controller="appController">
+		<header ng-include="header"></header>
+		<div class="lighterbasecolor">
+	        <div class="centrewrapper content contentbasecolor">    
+	            <div ng-include="mgrheader"></div>
+	            <div>
+					<a href='/manager/crews'>Back</a>
+					<div class="form-container">
+						<p class="form-header">
+							ADD CREW<br />
+						</p>
+						<form class="form-horizontal" action="/manager/addcrew" method="POST">
+							<fieldset>
+		                        <legend>Crew Profile</legend>
+		                        <div class="control-group">
+		                            <label class="control-label" for="firstname">Firstname</label>
+		                            <div class="controls">
+		                                <input type="text" name="firstname">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="lastname">Lastname</label>
+		                            <div class="controls">
+		                                <input type="text" name="lastname">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="street">Street</label>
+		                            <div class="controls">
+		                                <input type="text" name="street">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="city">City</label>
+		                            <div class="controls">
+		                                <input type="text" name="city">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="state">State</label>
+		                            <div class="controls">
+		                                <input type="text" name="state">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="postcode">Postcode</label>
+		                            <div class="controls">
+		                                <input type="text" name="postcode">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="email">Email</label>
+		                            <div class="controls">
+		                                <input type="text" name="email">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label" for="phone">Phone</label>
+		                            <div class="controls">
+		                                <input type="text" name="phone">
+		                            </div>
+		                        </div>
+		                        <div class="control-group">
+		                            <label class="control-label">&nbsp;</label>
+		                            <div class="controls">
+		                                <input type="submit" class="btn btn-primary" value="Save">
+		                            </div>
+		                        </div>
+		                    </fieldset>							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<!-- <hr>
+	<%= msg %> -->
+	<script src="/static/js/app/maribeth_app.js"></script>	
+	
+</body>
+</html>
+
+

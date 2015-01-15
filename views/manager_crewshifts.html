@@ -1,0 +1,106 @@
+<!doctype html>
+<html ng-app="maribethApp">
+<head>
+	<title>Crew's Hub - Shifts</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+	
+	<link rel="stylesheet" type="text/css" href="/static/pickadate/themes/classic.css" />
+    <link rel="stylesheet" type="text/css" href="/static/pickadate/themes/classic.date.css" />
+    <link rel="stylesheet" type="text/css" href="/static/pickadate/themes/classic.time.css" />
+	
+	<script type="text/javascript" src="/static/js/jquery/jquery.min.js" ></script>
+	<script type="text/javascript" src="/static/pickadate/picker.js"></script>
+    <script type="text/javascript" src="/static/pickadate/picker.date.js"></script>
+    <script type="text/javascript" src="/static/pickadate/picker.time.js"></script>
+	<script type="text/javascript" src="/static/js/components/date.js"></script>
+
+	<script src="/static/js/angular/angular.js"></script>
+	<script src="/static/js/angular/angular-resource.js"></script>
+	<script src="/static/js/angular/angular-route.js"></script>	
+	
+</head>
+<body>
+	<div ng-controller="appController">
+		<header ng-include="header"></header>
+		<div class="lighterbasecolor">
+			<div class="centrewrapper content contentbasecolor">	
+				<div ng-include="mgrheader"></div>
+
+				<div style="min-height: 300px; max-width: 800px" ng-controller="profileCtrl">
+					<a href="/manager/crews">Back</a>
+					<h2>Crew: {{user[0].profile[0].firstname}}</h2>
+					<br />
+					<form class="form-horizontal" ng-controller="shiftsCtrl">
+						<input type="hidden" name="crewid" value="{{user[0]._id}}" />				
+						<div style="float: left;">
+				            <b>Add Shift: </b>
+				            <input type="text" name="startdate" placeholder="Pick a date" style="width:150px;" pick-a-date="shiftontable.startdate" />
+				        </div>
+				        <div style="float: right;" ng-hide="(shifts.length==0)">
+			    	        <b>Shift Records: </b>
+				            <select style="width:150px" ng-change="populateTable()" 
+				            	ng-model="shiftontable" ng-options="item.startdate for item in shiftrecords">
+				            	<option value="" disabled>Select a shift</option>
+				            </select>				                   
+				        </div>
+				        <br />
+				        <hr />        			        			        
+					    <div style="clear: both;margin: 10px auto;">
+					        <table class="shifttable">
+					            <thead>
+					                <tr>
+					                    <th>&nbsp;</th>
+					                    <th>Day</th>
+					                    <th class="greenheader">Start Work</th>
+					                    <th class="peachheader">Start Break</th>
+					                    <th class="peachheader">Finish Break</th>
+					                    <th class="greenheader">Finish Work</th>
+					                    <th>&nbsp;</th>
+					                </tr>
+					            </thead>
+					            <tbody>
+					                <tr ng-repeat="shifthours in shiftontable.shifthours">
+					                    <td><input type="checkbox" ng-model="shifthours.status" /></td>
+					                    <td><input ng-model="shifthours.day" disabled></td>
+					                    <td class="greenrow">
+					                    	<input type="text" name="startwork_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.startwork"/>
+					                    </td>
+					                    <td class="peachrow">
+					                    	<input type="text" name="startbreak_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.startbreak"/>
+					                    </td>
+					                    <td class="peachrow">
+					                    	<input type="text" name="finishbreak_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.finishbreak"/>
+					                    </td>
+					                    <td class="greenrow">
+					                    	<input type="text" name="finishwork_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.finishwork"/>
+					                    </td>
+					                    <td>
+					                    	<input type="button" value="Clear" class="btn" ng-click="resetRow(shifthours)" />
+					                    </td>
+					                </tr>
+					            </tbody>
+					        </table>
+					        <div id="errormsg" class="message-error" /> 
+					    </div>
+					    <div class="form-actions">
+					        <button id="btn-update" type="button" class="btn btn-primary" style="float:right;" ng-click="addShift()">
+					        	<span>Submit</span>
+					        </button>
+					    </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <hr>
+	<%= msg %> -->
+	
+	<script src="/static/js/app/maribeth_app.js"></script>
+	<script src="/static/js/app/profileCtrl.js"></script>
+	<script src="/static/js/app/shiftsCtrl.js"></script>
+	<script src="/static/js/app/pickadate.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="maribethApp">
+<head>
+	<title>Manager's Hub</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+
+	<script src="/static/js/angular/angular.js"></script>
+	<script src="/static/js/angular/angular-resource.js"></script>
+	<script src="/static/js/angular/angular-route.js"></script>
+</head>
+<body ng-controller="appController">
+	<header ng-include="header"></header>
+	<div class="lighterbasecolor">
+		<div class="centrewrapper content contentbasecolor">	
+			<div ng-include="mgrheader"></div>
+			<div ng-controller="crewsCtrl">
+				<h3>Welcome, <%= username %></h3>
+				
+				<div class="grid">
+					<div class="gridheader">
+						<span class="title">Crews List</span>
+						<a href='/manager/addcrew'>Add Crew</a>
+					</div>
+					<div class="row crewrow" ng-repeat="crew in crews">
+						<div class="name">{{crew.profile[0].firstname}}</div>
+						<div class="item"><a href="/manager/crewshifts/{{crew._id}}">Shifts</a></div>
+						<div class="item"><a href="/manager/crewcalendar/{{crew._id}}">Calendar</a></div>
+						<div class="item"><a href="/profile/{{crew._id}}">Profile</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div ng-controller="appController">
+		<div style="min-height: 300px;" ng-controller="crewsCtrl">
+			<a href='/manager/addcrew'>Add Crew</a><br /><br />
+			<h3>Crews List</h3>
+
+			<div class="crewlist" ng-repeat="crew in crews">
+				<span>{{crew.profile[0].firstname}} | </span>
+				<span><a href="/manager/crewshifts/{{crew._id}}">Shifts</a> | </span>
+				<span><a href="/manager/crewcalendar/{{crew._id}}">Calendar</a> | </span>
+				<span><a href="/profile/{{crew._id}}">Profile</a> | </span>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<%= msg %> -->
+	<script src="/static/js/app/maribeth_app.js"></script>
+	<script src="/static/js/app/profileCtrl.js"></script>	
+	<script src="/static/js/app/crewsCtrl.js"></script>
+		
+</body>
+</html>
+
+

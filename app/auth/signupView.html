@@ -1,0 +1,118 @@
+<div class="centrewrapper contentbasecolor">
+    <div class="inlinenavigation">
+        <a ui-sref="welcome">Back</a>
+    </div>
+	<div class="form-header">
+        <p>SIGN UP</p>
+		<span>*{{vm.trace}}</span>    		            
+    </div>						
+	<form class="form-horizontal" name="signUpForm">            
+		<fieldset>
+			<legend>Login Account</legend>
+			<div class="control-group">
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="username" placeholder="i.e. Bethington" ng-model="vm.username">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls"> 
+                    <input type="text" class="form-control" id="password" placeholder="min. 4 alphanumeric chars" ng-model="vm.password">
+                </div>
+            </div>
+		</fieldset>
+		<fieldset>
+			<legend>Company Profile</legend>
+			<div class="control-group">
+                <label class="control-label" for="coname">Company Name</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="coname" ng-model="vm.companyname">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="costreet">Street</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="costreet" placeholder="ie. 54 El Alamein St." ng-model="vm.companystreet">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="cocity">City</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="cocity" ng-model="vm.companycity">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="costate">State</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="costate" ng-model="vm.companystate">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="copostcode">Postcode</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="copostcode" ng-model="vm.companypostcode">
+                </div>
+            </div>
+		</fieldset>
+		<fieldset>
+			<legend>Manager Profile</legend>
+			<div class="control-group">
+                <label class="control-label" for="firstname">Firstname</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="firstname" ng-model="firstname">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="lastname">Lastname</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="lastname" ng-model="vm.lastname">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="street">Street</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="street" ng-model="vm.street">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="city">City</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="city" ng-model="vm.city">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="state">State</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="state" ng-model="vm.state">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="postcode">Postcode</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="postcode" ng-model="vm.postcode">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="email">Email</label>
+                <div class="controls">
+                    <input type="email" class="form-control" id="email" ng-model="vm.email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="phone">Phone</label>
+                <div class="controls">
+                    <input type="text" class="form-control" id="phone" ng-model="vm.phone">
+                </div>
+            </div>
+		</fieldset>
+		 <fieldset>
+            <div class="control-group">
+                <label class="control-label">&nbsp;</label>
+                <div class="controls">
+                    <button type="button" class="btn btn-primary" ng-click="vm.signMeUp()">Register</button>
+                </div>
+            </div>
+        </fieldset>			
+	</form>
+</div>

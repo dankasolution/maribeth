@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+    
+    <script src="/static/js/angular/angular.js"></script>
+    <script src="/static/js/angular/angular-resource.js"></script>
+    <script src="/static/js/angular/angular-route.js"></script>
+</head>
+<body>
+    <header class="bar basecolor">
+        <img src="../images/maribeth-logo.png" />
+    </header>
+    <div class="lighterbasecolor">
+    	<div class="centrewrapper contentbasecolor">
+            <div class="inlinenavigation">
+                <a href="/">Home</a>
+            </div>
+    		<div class="form-header">
+                <p>SIGN UP</p>
+        		<span>*Only for managers</span>    		            
+            </div>						
+    		<form class="form-horizontal" method="POST">            
+    			<fieldset>
+    				<legend>Login Account</legend>
+    				<div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" name="username">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <input type="text" name="password">
+                        </div>
+                    </div>
+    			</fieldset>
+    			<fieldset>
+    				<legend>Company Profile</legend>
+    				<div class="control-group">
+                        <label class="control-label" for="companyname">Company Name</label>
+                        <div class="controls">
+                            <input type="text" name="companyname">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="companystreet">Street</label>
+                        <div class="controls">
+                            <input type="text" name="companystreet">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="companycity">City</label>
+                        <div class="controls">
+                            <input type="text" name="companycity">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="companystate">State</label>
+                        <div class="controls">
+                            <input type="text" name="companystate">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="companypostcode">Postcode</label>
+                        <div class="controls">
+                            <input type="text" name="companypostcode">
+                        </div>
+                    </div>
+    			</fieldset>
+    			<fieldset>
+    				<legend>Manager Profile</legend>
+    				<div class="control-group">
+                        <label class="control-label" for="firstname">Firstname</label>
+                        <div class="controls">
+                            <input type="text" name="firstname">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="lastname">Lastname</label>
+                        <div class="controls">
+                            <input type="text" name="lastname">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="street">Street</label>
+                        <div class="controls">
+                            <input type="text" name="street">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="city">City</label>
+                        <div class="controls">
+                            <input type="text" name="city">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="state">State</label>
+                        <div class="controls">
+                            <input type="text" name="state">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="postcode">Postcode</label>
+                        <div class="controls">
+                            <input type="text" name="postcode">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email</label>
+                        <div class="controls">
+                            <input type="text" name="email">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="phone">Phone</label>
+                        <div class="controls">
+                            <input type="text" name="phone">
+                        </div>
+                    </div>
+    			</fieldset>
+    			 <fieldset>
+                    <div class="control-group">
+                        <label class="control-label">&nbsp;</label>
+                        <div class="controls">
+                            <input type="submit" value="Register">
+                        </div>
+                    </div>
+                </fieldset>			
+    		</form>
+    	</div>
+    </div>
+	<!-- <hr><%= msg %> -->    
+</body>
+</html>

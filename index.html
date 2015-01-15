@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/site.css" />
+    
+    <script src="static/js/jquery-2.0.3.js"></script> <!-- jQuery should be placed before angular.js -->
+    <script src="static/js/angular.js"></script>
+    <script src="static/js/angular-resource.js"></script>
+    <script src="static/js/angular-ui-router.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/auth/welcomeCtrl.js"></script> 
+    <script src="app/auth/signupCtrl.js"></script>
+</head>
+<body ng-app="maribethApp">
+    <header class="bar basecolor">
+        <img src="static/images/maribeth-logo.png" />
+    </header>
+    <div class="container">     
+        <div ui-view></div>
+    </div>  
+</body>
+</html>

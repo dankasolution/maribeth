@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="maribethApp">
+<head>
+	<title>Manager's Hub</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap-3.2.0/css/bootstrap.min.css" />
+	<script src="/static/js/angular/angular.js"></script>
+	<script src="/static/js/angular/angular-resource.js"></script>
+	<script src="/static/js/angular/angular-route.js"></script>
+</head>
+<body>
+	<div ng-controller="appController">
+		<div ng-include="mgrheader"></div>
+		<div ng-view></div>
+	</div>
+	<hr>
+	<%= msg %>
+	<script src="/static/js/app/maribeth_app.js"></script>	
+</body>
+</html>
+
+

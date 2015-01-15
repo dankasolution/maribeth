@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>User Login and Sessions</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/site.css" />
+	
+	<script src="/static/js/angular/angular.js"></script>
+	<script src="/static/js/angular/angular-resource.js"></script>
+	<script src="/static/js/angular/angular-route.js"></script>
+</head>
+<body>
+	<header class="bar basecolor">
+		<img src="../images/maribeth-logo.png" />
+	</header>
+	<section class="homebanner">
+		<p class="centrewrapper">Crew Shift Management<br />
+			... never been easier...
+		</p>
+	</section>
+	<div class="bar basecolor">
+		<div class="centrewrapper">
+			<form class="form-login" method="POST">
+				<label>Username: </label>
+				<input type="text" name="username">&nbsp;&nbsp;
+				<label>Password: </label>
+				<input type="password" name="password">&nbsp;&nbsp;
+				<input type="submit" class="btn btn-primary" value="Login">
+			</form>
+			<!-- <p class="msg"><%= msg %></p> -->
+			<div class="form-footer">
+				Not registered yet? <a href="/signup">Sign Up here</a>
+			</div>
+		</div>
+		<br /><br /><br /><br />
+	</div>	
+</body>
+</html>
